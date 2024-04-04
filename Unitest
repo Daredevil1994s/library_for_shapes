@@ -1,0 +1,17 @@
+import unittest
+
+class TestShapes(unittest.TestCase):
+    def test_circle_area(self):
+        circle = Circle(5)
+        self.assertEqual(circle.area(), math.pi * 25)
+
+    def test_triangle_area(self):
+        triangle = Triangle(3, 4, 5)
+        self.assertEqual(triangle.area(), 6)
+
+    def test_right_triangle(self):
+        triangle = Triangle(3, 4, 5)
+        self.assertTrue(triangle.is_right_triangle())
+
+if __name__ == '__main__':
+    unittest.main()
